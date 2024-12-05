@@ -6,28 +6,33 @@
 /*   By: jgasparo <jgasparo@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/05 09:56:42 by jgasparo          #+#    #+#             */
-/*   Updated: 2024/12/05 17:04:17 by jgasparo         ###   ########.fr       */
+/*   Updated: 2024/12/05 22:16:07 by jgasparo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/ClapTrap.hpp"
 
-ClapTrap::ClapTrap(const std::string &name): _name(name), _hitPoints(10), _energyPoints(10), _attackDamage(0)
+ClapTrap::ClapTrap(void): _name("JohnDoe"),, _hitPoints(100), _energyPoints(50), _attackDamage(20)
 {
-	std::cout << "Default constructor called" << std::endl;
+	std::cout << "Default constructor called from ClapTrap" << std::endl;
+	return;
+}
+
+ClapTrap::ClapTrap(const std::string &name): _name(name), _hitPoints(100), _energyPoints(50), _attackDamage(20)
+{
 	return;
 }
 
 ClapTrap::ClapTrap(const ClapTrap &copied)
 {
-	std::cout << "Copy constructor called" << std::endl;
+	std::cout << "Copy constructor called from ClapTrap" << std::endl;
 	*this = copied;
 	return;
 }
 
 ClapTrap::~ClapTrap()
 {
-	std::cout << "Destructor called" << std::endl;
+	std::cout << "Destructor called from ClapTrap" << std::endl;
 	return;
 }
 
@@ -44,17 +49,17 @@ ClapTrap	&ClapTrap::operator=(const ClapTrap &base)
 }
 
 /* a remove */
-std::string	ClapTrap::getName(void)
+std::string	ClapTrap::getName(void) const
 {
 	return _name;
 }
 
-unsigned int	ClapTrap::getLife(void)
+unsigned int	ClapTrap::getLife(void) const 
 {
 	return this->_hitPoints;
 }
 
-unsigned int	ClapTrap::getEnergy(void)
+unsigned int	ClapTrap::getEnergy(void) const
 {
 	return this->_energyPoints;
 }

@@ -1,42 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ClapTrap.hpp                                       :+:      :+:    :+:   */
+/*   ScavTrap.hpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jgasparo <jgasparo@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/12/05 09:56:37 by jgasparo          #+#    #+#             */
-/*   Updated: 2024/12/05 17:03:59 by jgasparo         ###   ########.fr       */
+/*   Created: 2024/12/05 14:32:08 by jgasparo          #+#    #+#             */
+/*   Updated: 2024/12/05 22:17:59 by jgasparo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef CLAPTRAP_HPP
-# define CLAPTRAP_HPP
+#ifndef SCAVTRAP_HPP
+# define SCAVTRAP_HPP
 
+#include "ClapTrap.hpp"
 #include <iostream>
 #include <string>
 
-class ClapTrap
+class ScavTrap : public ClapTrap
 {
-	private:
-		std::string				_name;
-		unsigned int			_hitPoints;
-		unsigned int			_energyPoints;
-		unsigned int			_attackDamage;
-
 	public:
-		ClapTrap(const std::string &name);
-		ClapTrap(const ClapTrap &copied);
-		ClapTrap &operator=(const ClapTrap &base);
-		~ClapTrap();
+		ScavTrap(void);
+		ScavTrap(const std::string &name);
+		ScavTrap(const ScavTrap &copied);
+		ScavTrap &operator=(const ScavTrap &base);
+		~ScavTrap();
 
+		void	guardGate() const;
 		void	attack(const std::string &target);
-		void	takeDamage(unsigned int amount);
-		void	beRepaired(unsigned int amount);
-
-		std::string	getName(void);
-		unsigned int	getLife(void);
-		unsigned int	getEnergy(void);
 };
 
 #endif
