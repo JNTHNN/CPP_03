@@ -6,14 +6,14 @@
 #    By: jgasparo <jgasparo@student.s19.be>         +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/12/05 09:55:26 by jgasparo          #+#    #+#              #
-#    Updated: 2024/12/06 12:21:27 by jgasparo         ###   ########.fr        #
+#    Updated: 2024/12/06 12:23:08 by jgasparo         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME 		:= ClapTrap
 
 CPP 		:= c++
-CPPFLAGS	:= -Wall -Wextra -Werror -std=c++98 -MMD -pedantic
+CPPFLAGS	:= -Wall -Wextra -Werror -std=c++98 -MMD
 
 SRC_DIR		:=	sources/
 OBJ_DIR		:=	.obj/
