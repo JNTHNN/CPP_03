@@ -6,7 +6,7 @@
 /*   By: jgasparo <jgasparo@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/05 09:56:42 by jgasparo          #+#    #+#             */
-/*   Updated: 2024/12/05 17:04:17 by jgasparo         ###   ########.fr       */
+/*   Updated: 2024/12/06 12:20:39 by jgasparo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,22 +49,6 @@ ClapTrap	&ClapTrap::operator=(const ClapTrap &base)
 	return *this;
 }
 
-/* a remove */
-std::string	ClapTrap::getName(void)
-{
-	return _name;
-}
-
-unsigned int	ClapTrap::getLife(void)
-{
-	return this->_hitPoints;
-}
-
-unsigned int	ClapTrap::getEnergy(void)
-{
-	return this->_energyPoints;
-}
-
 void	ClapTrap::attack(const std::string &target)
 {
 	if (this->_hitPoints > 0 || this->_energyPoints > 0)
@@ -75,7 +59,6 @@ void	ClapTrap::attack(const std::string &target)
 	else
 		std::cout << "Oh no, no energy or hitpoint" << std::endl;
 }
-
 
 void	ClapTrap::takeDamage(unsigned int amount)
 {
@@ -99,9 +82,23 @@ void	ClapTrap::beRepaired(unsigned int amount)
 	{
 		std::cout << "Beep Beep, I'm repairing myself" << std::endl;
 		this->_hitPoints += amount;
-		std::cout << this->_hitPoints << " et " << this->_energyPoints << std::endl;
 		this->_energyPoints--;
 	}
 	else 
 		std::cout << "Oh no, no energy or hitpoint" << std::endl;
+}
+
+std::string	ClapTrap::getName(void)
+{
+	return _name;
+}
+
+unsigned int	ClapTrap::getLife(void)
+{
+	return this->_hitPoints;
+}
+
+unsigned int	ClapTrap::getEnergy(void)
+{
+	return this->_energyPoints;
 }
