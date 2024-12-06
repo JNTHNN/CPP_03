@@ -24,7 +24,8 @@ int	main(void)
 		std::cout << "Energy : " << a.getEnergy() << std::endl;
 		a.attack("PNJ");
 		std::cout << "Life and energy after attack : " << a.getLife() << " " << a.getEnergy() << std::endl;
-		a.takeDamage(20);
+		a.takeDamage(100);
+		a.takeDamage(100);
 		std::cout << "Life and energy after taking damage : " << a.getLife() << " " << a.getEnergy() << std::endl;
 		a.highFivesGuys();
 		a.beRepaired(20);

@@ -45,7 +45,7 @@ int	main(void)
 		ScavTrap d = c;
 		std::cout << "Name : " << d.getName() << std::endl;
 		std::cout << "Life : " << d.getLife() << std::endl;
-		std::cout << "Eneßrgy : " << d.getEnergy() << std::endl;
+		std::cout << "Energy : " << d.getEnergy() << std::endl;
 
 	}
 	return 0;
