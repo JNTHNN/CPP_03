@@ -6,22 +6,30 @@
 /*   By: jgasparo <jgasparo@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/05 20:29:17 by jgasparo          #+#    #+#             */
-/*   Updated: 2024/12/05 22:17:40 by jgasparo         ###   ########.fr       */
+/*   Updated: 2024/12/06 14:08:32 by jgasparo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../includes/ScavTrap.hpp"
-#include "../includes/ClapTrap.hpp"
 
-ScavTrap::ScavTrap(void): ClapTrap(void)
+#include "../includes/ScavTrap.hpp"
+
+ScavTrap::ScavTrap(void): ClapTrap()
 {
 	std::cout << "Default constructor called from Scavtrap" << std::endl;
-	
-	
+	this->_name = "GeorgeMichael";
+	this->_hitPoints = 100;
+	this->_energyPoints = 50;
+	this->_attackDamage = 20;
+	return;
 }
 
 ScavTrap::ScavTrap(const std::string &name): ClapTrap(name)
 {
+	std::cout << "Constructor with name assigned called from Scavtrap" << std::endl;
+	this->_name = name;
+	this->_hitPoints = 100;
+	this->_energyPoints = 50;
+	this->_attackDamage = 20;
 	return;
 }
 

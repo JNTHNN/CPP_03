@@ -6,7 +6,7 @@
 /*   By: jgasparo <jgasparo@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/05 14:32:08 by jgasparo          #+#    #+#             */
-/*   Updated: 2024/12/05 22:17:59 by jgasparo         ###   ########.fr       */
+/*   Updated: 2024/12/06 12:42:39 by jgasparo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@
 class ScavTrap : public ClapTrap
 {
 	public:
-		ScavTrap(void);
+		ScavTrap();
 		ScavTrap(const std::string &name);
 		ScavTrap(const ScavTrap &copied);
 		ScavTrap &operator=(const ScavTrap &base);
