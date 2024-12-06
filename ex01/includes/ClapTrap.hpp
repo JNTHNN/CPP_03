@@ -25,6 +25,7 @@ class ClapTrap
 		unsigned int			_attackDamage;
 
 	public:
+		ClapTrap();
 		ClapTrap(const std::string &name);
 		ClapTrap(const ClapTrap &copied);
 		ClapTrap &operator=(const ClapTrap &base);

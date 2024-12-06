@@ -13,9 +13,15 @@
 #include "../includes/ScavTrap.hpp"
 #include "../includes/ClapTrap.hpp"
 
-ScavTrap::ScavTrap(const std::string &name): ClapTrap(name)
+ScavTrap::ScavTrap(void): ClapTrap()
 {
 	std::cout << "Default constructor called from Scavtrap" << std::endl;
+	return;
+}
+
+ScavTrap::ScavTrap(const std::string &name): ClapTrap(name)
+{
+	std::cout << "Constructor with name assigned called from Scavtrap" << std::endl;
 	return;
 }
 

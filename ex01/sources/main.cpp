@@ -15,7 +15,12 @@
 
 int	main(void)
 {
-	ClapTrap a("jojo");
+
+	std::cout << "	- CLAPTRAP ATTRIBUTES -" << std::endl;
+	{
+		ClapTrap a("jojo");
+
+		std::cout << "Name :" << a.getName() << std::endl;
 	ScavTrap b("Soso");
 
 	ScavTrap c = b;
@@ -28,7 +33,6 @@ int	main(void)
 	c.takeDamage(50);
 	std::cout << c.getLife() << std::endl;
 	
-
 
 	std::cout << c.getEnergy() << std::endl;
 	std::cout << c.getName() << std::endl;
