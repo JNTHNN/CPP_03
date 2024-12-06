@@ -6,7 +6,7 @@
 /*   By: jgasparo <jgasparo@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/05 09:56:42 by jgasparo          #+#    #+#             */
-/*   Updated: 2024/12/06 12:23:39 by jgasparo         ###   ########.fr       */
+/*   Updated: 2024/12/06 12:36:23 by jgasparo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -90,7 +90,7 @@ void	ClapTrap::beRepaired(unsigned int amount)
 }
 
 
-std::string	ClapTrap::getName(void) const
+const std::string	ClapTrap::getName(void) const
 {
 	return _name;
 }
@@ -100,7 +100,7 @@ unsigned int	ClapTrap::getLife(void) const
 	return this->_hitPoints;
 }
 
-unsigned int	ClapTrap::getEnergy(void) const
+unsigned int 	ClapTrap::getEnergy(void) const
 {
 	return this->_energyPoints;
 }

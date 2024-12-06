@@ -6,7 +6,7 @@
 /*   By: jgasparo <jgasparo@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/05 09:56:39 by jgasparo          #+#    #+#             */
-/*   Updated: 2024/12/06 12:32:07 by jgasparo         ###   ########.fr       */
+/*   Updated: 2024/12/06 12:37:29 by jgasparo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,7 +45,7 @@ int	main(void)
 		ScavTrap d = c;
 		std::cout << "Name : " << d.getName() << std::endl;
 		std::cout << "Life : " << d.getLife() << std::endl;
-		std::cout << "Energy : " << d.getEnergy() << std::endl;
+		std::cout << "Eneßrgy : " << d.getEnergy() << std::endl;
 
 	}
 	return 0;
